@@ -8,7 +8,7 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 /**
- * Created by nando on 03/03/17.
+ * 
  */
 @Repository
 public class SalaDao {
@@ -22,7 +22,7 @@ public class SalaDao {
     }
 
     public void save(Sala sala) {
-        manager.persist(sala);
+        manager.merge(sala);
     }
 
     public List<Sala> findAll() {
